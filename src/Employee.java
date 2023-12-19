@@ -16,7 +16,7 @@ public class Employee {
         if (this.salary > 1000) {
             return this.salary * 3 / 100;
         }
-        return this.salary;
+        return 0;
     }
 
     public double bonus() {
@@ -25,7 +25,7 @@ public class Employee {
             double bonus = 30 * (this.workHours - 40);
             return bonus;
         }
-        return this.salary;
+        return 0;
     }
 
     public double raiseSalary() {
@@ -50,7 +50,7 @@ public class Employee {
 
         return  "Adı : "+this.name+"\n"+"Maaş : "+this.salary+"\n"+
                 "Çalışma Saati : "+this.workHours+"\n"+"Başlangıç Yılı : "+this.hireYear+
-                "\n"+"Vwergi : "+this.tax()+"\n"+"Bonus : "+this.bonus()+"\n"+"Maaş Artışı : "+
+                "\n"+"Vergi : "+this.tax()+"\n"+"Bonus : "+this.bonus()+"\n"+"Maaş Artışı : "+
                 this.raiseSalary()+"\n"+ "Vergi ve Bonuslar ile birlikte maaş : "+
                 (((this.salary+this.bonus())-this.tax()))+"\n"+"Toplam Maaş : "+
                 ((this.bonus()-this.tax())+this.salary+this.raiseSalary());
